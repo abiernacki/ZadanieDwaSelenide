@@ -22,11 +22,26 @@ public class MyStoreShopping {
 
     @Given("wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika")
     public void wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika() {
+
+        Configuration.holdBrowserOpen = true;
+//        Configuration.browserSize = "1980x1080";
+        Configuration.timeout = 5000;
+        open("https://prod-kurs.coderslab.pl/");
     }
 
 
     @When("logowanie na stworzonego uzytkownika")
     public void logowanieNaStworzonegoUzytkownika() {
+
+        $(By.xpath("//*[@id=\"_desktop_user_info\"]/div/a")).click();
+
+        $(By.name("email")).clear();
+        $(By.name("email")).sendKeys("zenon@domena.pl");
+
+        $(By.name("password")).clear();
+        $(By.name("password")).sendKeys("myszka777");
+
+        $(By.id("submit-login")).click();
     }
 
 
