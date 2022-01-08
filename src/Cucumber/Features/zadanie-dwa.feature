@@ -6,7 +6,7 @@ Feature: Kupno koszulki
     Then wybieramy do zakupu Hummingbird Printed Sweater
     And wybieramy "<rozmiar>" i "5", dodajemy produkt do koszyka przechodzimy do proceed to checkout
     And potwierdzenie adresu, wybranie metody obioru
-#    And wybranie metody platności, klikniecie order with obligation to pay
+    And wybranie metody platności, klikniecie order with obligation to pay
 #    Then screenshot z potwierdzeniem zamówienia i kwota
 #
     Examples:

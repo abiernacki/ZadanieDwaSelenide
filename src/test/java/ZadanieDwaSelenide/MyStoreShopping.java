@@ -107,11 +107,17 @@ public class MyStoreShopping {
     }
 
 
-//    @And("wybranie metody platności, klikniecie order with obligation to pay")
-//    public void wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay() {
-//    }
-//
-//
+    @And("wybranie metody platności, klikniecie order with obligation to pay")
+    public void wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay() {
+
+        $(By.id("payment-option-1")).click();
+
+        $(By.id("conditions_to_approve[terms-and-conditions]")).click();
+
+        $(By.cssSelector(".btn.btn-primary.center-block")).click();
+    }
+
+
 //    @Then("screenshot z potwierdzeniem zamówienia i kwota")
 //    public void screenshotZPotwierdzeniemZamówieniaIKwota() {
 //    }
