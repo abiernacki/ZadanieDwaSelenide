@@ -20,6 +20,8 @@ import java.util.Random;
 
 public class MyStoreShopping {
 
+    boolean isDiscountPrice;
+
     @Given("wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika")
     public void wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika() {
 
@@ -47,26 +49,44 @@ public class MyStoreShopping {
 
     @And("wybieramy do zakupu Hummingbird Printed Sweater")
     public void wybieramyDoZakupuHummingbirdPrintedSweater() {
+
+        $(By.name("s")).sendKeys("Hummingbird printed t-shirt");
+        $(By.name("s")).submit();
+
+
+        $(By.xpath("//*[@id=\"js-product-list\"]//article//*[@class='product-description']//a[text()[contains(.,'Hummingbird printed t-shirt')]]")).click();
+
+        try {
+            $(By.cssSelector(".discount.discount-percentage"));
+            System.out.println("Koszulka jest w promocji!! Kup taniej o 20%");
+            isDiscountPrice = true;
+        } catch (NoSuchElementException e) {
+            System.out.println("Koszulka nie jest w promocji");
+            isDiscountPrice = false;
+        }
+
+        $(By.xpath("//label/input[@value ='11']")).click();
+
     }
 
 
-    @And("wybieramy {string} i 5, dodajemy produkt do koszyka przechodzimy do proceed to checkout")
-    public void wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(String rozmiar) {
-    }
-
-
-    @And("potwierdzenie adresu, wybranie metody obioru")
-    public void potwierdzenieAdresuWybranieMetodyObioru() {
-    }
-
-
-    @And("wybranie metody platności, klikniecie order with obligation to pay")
-    public void wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay() {
-    }
-
-
-    @Then("screenshot z potwierdzeniem zamówienia i kwota")
-    public void screenshotZPotwierdzeniemZamówieniaIKwota() {
-    }
+//    @And("wybieramy {string} i 5, dodajemy produkt do koszyka przechodzimy do proceed to checkout")
+//    public void wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(String rozmiar) {
+//    }
+//
+//
+//    @And("potwierdzenie adresu, wybranie metody obioru")
+//    public void potwierdzenieAdresuWybranieMetodyObioru() {
+//    }
+//
+//
+//    @And("wybranie metody platności, klikniecie order with obligation to pay")
+//    public void wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay() {
+//    }
+//
+//
+//    @Then("screenshot z potwierdzeniem zamówienia i kwota")
+//    public void screenshotZPotwierdzeniemZamówieniaIKwota() {
+//    }
 }
 
