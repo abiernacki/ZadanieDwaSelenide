@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="50.495">
+    <testcase classname="Kupno koszulki" name="uzytkownik moze kupic koszulki" time="14.904">
+        <system-out><![CDATA[Given wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika..passed
+When logowanie na stworzonego uzytkownika...................................passed
+And wybieramy do zakupu Hummingbird Printed Sweater.........................passed
+And wybieramy "S" i "5", dodajemy produkt do koszyka przechodzimy do proceed to checkout.passed
+And potwierdzenie adresu, wybranie metody obioru............................passed
+And wybranie metody platności, klikniecie order with obligation to pay......passed
+Then screenshot z potwierdzeniem zamówienia i kwota.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Kupno koszulki" name="uzytkownik moze kupic koszulki 2" time="12.154">
+        <system-out><![CDATA[Given wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika..passed
+When logowanie na stworzonego uzytkownika...................................passed
+And wybieramy do zakupu Hummingbird Printed Sweater.........................passed
+And wybieramy "M" i "5", dodajemy produkt do koszyka przechodzimy do proceed to checkout.passed
+And potwierdzenie adresu, wybranie metody obioru............................passed
+And wybranie metody platności, klikniecie order with obligation to pay......passed
+Then screenshot z potwierdzeniem zamówienia i kwota.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Kupno koszulki" name="uzytkownik moze kupic koszulki 3" time="11.622">
+        <system-out><![CDATA[Given wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika..passed
+When logowanie na stworzonego uzytkownika...................................passed
+And wybieramy do zakupu Hummingbird Printed Sweater.........................passed
+And wybieramy "L" i "5", dodajemy produkt do koszyka przechodzimy do proceed to checkout.passed
+And potwierdzenie adresu, wybranie metody obioru............................passed
+And wybranie metody platności, klikniecie order with obligation to pay......passed
+Then screenshot z potwierdzeniem zamówienia i kwota.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Kupno koszulki" name="uzytkownik moze kupic koszulki 4" time="11.613">
+        <system-out><![CDATA[Given wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika..passed
+When logowanie na stworzonego uzytkownika...................................passed
+And wybieramy do zakupu Hummingbird Printed Sweater.........................passed
+And wybieramy "XL" i "5", dodajemy produkt do koszyka przechodzimy do proceed to checkout.passed
+And potwierdzenie adresu, wybranie metody obioru............................passed
+And wybranie metody platności, klikniecie order with obligation to pay......passed
+Then screenshot z potwierdzeniem zamówienia i kwota.........................passed
+]]></system-out>
+    </testcase>
+</testsuite>
