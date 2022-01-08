@@ -1,0 +1,36 @@
+
+Scenario Outline: uzytkownik moze kupic koszulki                                           [90m# src/Cucumber/Features/zadanie-dwa.feature:14[0m
+  [32mGiven [0m[32mwlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika[0m               [90m# ZadanieDwaSelenide.MyStoreShopping.wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika()[0m
+  [32mWhen [0m[32mlogowanie na stworzonego uzytkownika[0m                                                [90m# ZadanieDwaSelenide.MyStoreShopping.logowanieNaStworzonegoUzytkownika()[0m
+  [32mAnd [0m[32mwybieramy do zakupu Hummingbird Printed Sweater[0m                                      [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyDoZakupuHummingbirdPrintedSweater()[0m
+  [32mAnd [0m[32mwybieramy [0m[32m[1m"S"[0m[32m i [0m[32m[1m"5"[0m[32m, dodajemy produkt do koszyka przechodzimy do proceed to checkout[0m [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(java.lang.String,java.lang.String)[0m
+  [32mAnd [0m[32mpotwierdzenie adresu, wybranie metody obioru[0m                                         [90m# ZadanieDwaSelenide.MyStoreShopping.potwierdzenieAdresuWybranieMetodyObioru()[0m
+  [32mAnd [0m[32mwybranie metody platności, klikniecie order with obligation to pay[0m                   [90m# ZadanieDwaSelenide.MyStoreShopping.wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay()[0m
+  [32mThen [0m[32mscreenshot z potwierdzeniem zamówienia i kwota[0m                                      [90m# ZadanieDwaSelenide.MyStoreShopping.screenshotZPotwierdzeniemZamówieniaIKwota()[0m
+
+Scenario Outline: uzytkownik moze kupic koszulki                                           [90m# src/Cucumber/Features/zadanie-dwa.feature:15[0m
+  [32mGiven [0m[32mwlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika[0m               [90m# ZadanieDwaSelenide.MyStoreShopping.wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika()[0m
+  [32mWhen [0m[32mlogowanie na stworzonego uzytkownika[0m                                                [90m# ZadanieDwaSelenide.MyStoreShopping.logowanieNaStworzonegoUzytkownika()[0m
+  [32mAnd [0m[32mwybieramy do zakupu Hummingbird Printed Sweater[0m                                      [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyDoZakupuHummingbirdPrintedSweater()[0m
+  [32mAnd [0m[32mwybieramy [0m[32m[1m"M"[0m[32m i [0m[32m[1m"5"[0m[32m, dodajemy produkt do koszyka przechodzimy do proceed to checkout[0m [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(java.lang.String,java.lang.String)[0m
+  [32mAnd [0m[32mpotwierdzenie adresu, wybranie metody obioru[0m                                         [90m# ZadanieDwaSelenide.MyStoreShopping.potwierdzenieAdresuWybranieMetodyObioru()[0m
+  [32mAnd [0m[32mwybranie metody platności, klikniecie order with obligation to pay[0m                   [90m# ZadanieDwaSelenide.MyStoreShopping.wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay()[0m
+  [32mThen [0m[32mscreenshot z potwierdzeniem zamówienia i kwota[0m                                      [90m# ZadanieDwaSelenide.MyStoreShopping.screenshotZPotwierdzeniemZamówieniaIKwota()[0m
+
+Scenario Outline: uzytkownik moze kupic koszulki                                           [90m# src/Cucumber/Features/zadanie-dwa.feature:16[0m
+  [32mGiven [0m[32mwlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika[0m               [90m# ZadanieDwaSelenide.MyStoreShopping.wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika()[0m
+  [32mWhen [0m[32mlogowanie na stworzonego uzytkownika[0m                                                [90m# ZadanieDwaSelenide.MyStoreShopping.logowanieNaStworzonegoUzytkownika()[0m
+  [32mAnd [0m[32mwybieramy do zakupu Hummingbird Printed Sweater[0m                                      [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyDoZakupuHummingbirdPrintedSweater()[0m
+  [32mAnd [0m[32mwybieramy [0m[32m[1m"L"[0m[32m i [0m[32m[1m"5"[0m[32m, dodajemy produkt do koszyka przechodzimy do proceed to checkout[0m [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(java.lang.String,java.lang.String)[0m
+  [32mAnd [0m[32mpotwierdzenie adresu, wybranie metody obioru[0m                                         [90m# ZadanieDwaSelenide.MyStoreShopping.potwierdzenieAdresuWybranieMetodyObioru()[0m
+  [32mAnd [0m[32mwybranie metody platności, klikniecie order with obligation to pay[0m                   [90m# ZadanieDwaSelenide.MyStoreShopping.wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay()[0m
+  [32mThen [0m[32mscreenshot z potwierdzeniem zamówienia i kwota[0m                                      [90m# ZadanieDwaSelenide.MyStoreShopping.screenshotZPotwierdzeniemZamówieniaIKwota()[0m
+
+Scenario Outline: uzytkownik moze kupic koszulki                                            [90m# src/Cucumber/Features/zadanie-dwa.feature:17[0m
+  [32mGiven [0m[32mwlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika[0m                [90m# ZadanieDwaSelenide.MyStoreShopping.wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika()[0m
+  [32mWhen [0m[32mlogowanie na stworzonego uzytkownika[0m                                                 [90m# ZadanieDwaSelenide.MyStoreShopping.logowanieNaStworzonegoUzytkownika()[0m
+  [32mAnd [0m[32mwybieramy do zakupu Hummingbird Printed Sweater[0m                                       [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyDoZakupuHummingbirdPrintedSweater()[0m
+  [32mAnd [0m[32mwybieramy [0m[32m[1m"XL"[0m[32m i [0m[32m[1m"5"[0m[32m, dodajemy produkt do koszyka przechodzimy do proceed to checkout[0m [90m# ZadanieDwaSelenide.MyStoreShopping.wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(java.lang.String,java.lang.String)[0m
+  [32mAnd [0m[32mpotwierdzenie adresu, wybranie metody obioru[0m                                          [90m# ZadanieDwaSelenide.MyStoreShopping.potwierdzenieAdresuWybranieMetodyObioru()[0m
+  [32mAnd [0m[32mwybranie metody platności, klikniecie order with obligation to pay[0m                    [90m# ZadanieDwaSelenide.MyStoreShopping.wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay()[0m
+  [32mThen [0m[32mscreenshot z potwierdzeniem zamówienia i kwota[0m                                       [90m# ZadanieDwaSelenide.MyStoreShopping.screenshotZPotwierdzeniemZamówieniaIKwota()[0m
