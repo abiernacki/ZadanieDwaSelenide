@@ -5,15 +5,16 @@ import static com.codeborne.selenide.Condition.*;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.testng.Assert;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -22,12 +23,17 @@ public class MyStoreShopping {
 
     boolean isDiscountPrice;
 
+    Random random= new Random();
+    String number = String.valueOf(random.nextInt(10000000));
+
+
     @Given("wlaczamy strone sklepu PrestaShop, mamy zarejestrowanego uzytkownika")
     public void wlaczamyStroneSklepuPrestaShopMamyZarejestrowanegoUzytkownika() {
 
-        Configuration.holdBrowserOpen = true;
+//        Configuration.holdBrowserOpen = true;
 //        Configuration.browserSize = "1980x1080";
         Configuration.timeout = 5000;
+        Configuration.reportsFolder = "src/ScreenShoots";
         open("https://prod-kurs.coderslab.pl/");
     }
 
@@ -35,6 +41,8 @@ public class MyStoreShopping {
     @When("logowanie na stworzonego uzytkownika")
     public void logowanieNaStworzonegoUzytkownika() {
 
+
+        $(By.xpath("//*[@id=\"_desktop_user_info\"]/div/a")).click();
         $(By.xpath("//*[@id=\"_desktop_user_info\"]/div/a")).click();
 
         $(By.name("email")).clear();
@@ -45,6 +53,8 @@ public class MyStoreShopping {
 
         $(By.id("submit-login")).click();
     }
+
+
 
 
     @And("wybieramy do zakupu Hummingbird Printed Sweater")
@@ -118,8 +128,21 @@ public class MyStoreShopping {
     }
 
 
-//    @Then("screenshot z potwierdzeniem zamówienia i kwota")
-//    public void screenshotZPotwierdzeniemZamówieniaIKwota() {
-//    }
+    @Then("screenshot z potwierdzeniem zamówienia i kwota")
+    public void screenshotZPotwierdzeniemZamówieniaIKwota() {
+
+
+        screenshot("screen" + number);
+//
+////        TakesScreenshot scrShot = ((TakesScreenshot)driver);
+////        File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
+////        File destFile = new File("src/main/resources/screenshot/foto"+number+".png");
+////        FileUtils.copyFile(srcFile, destFile);
+//
+////        ScreenShooterExtension screenShooterExtension = new ScreenShooterExtension().to("ScreenShoots");
+//
+
+
+    }
 }
 
