@@ -23,7 +23,7 @@ public class MyStoreShopping {
 
     boolean isDiscountPrice;
 
-    Random random= new Random();
+    Random random = new Random();
     String number = String.valueOf(random.nextInt(10000000));
 
 
@@ -53,8 +53,6 @@ public class MyStoreShopping {
 
         $(By.id("submit-login")).click();
     }
-
-
 
 
     @And("wybieramy do zakupu Hummingbird Printed Sweater")
@@ -131,18 +129,21 @@ public class MyStoreShopping {
     @Then("screenshot z potwierdzeniem zamówienia i kwota")
     public void screenshotZPotwierdzeniemZamówieniaIKwota() {
 
-
         screenshot("screen" + number);
-//
-////        TakesScreenshot scrShot = ((TakesScreenshot)driver);
-////        File srcFile = scrShot.getScreenshotAs(OutputType.FILE);
-////        File destFile = new File("src/main/resources/screenshot/foto"+number+".png");
-////        FileUtils.copyFile(srcFile, destFile);
-//
-////        ScreenShooterExtension screenShooterExtension = new ScreenShooterExtension().to("ScreenShoots");
-//
 
+        $(By.cssSelector("a[title='View my customer account']")).click();
+        $(By.id("history-link")).click();
 
+        List<WebElement> money = new ArrayList<>($$(By.xpath("//table/tbody/tr/td")));
+        String cash = money.get(1).getText();
+
+        List<WebElement> trElements = new ArrayList<>($$(By.tagName("tr")));
+        String lastOrder = trElements.get(1).getText();
+
+        Assert.assertTrue(lastOrder.contains("Awaiting check payment"));
+        Assert.assertTrue(lastOrder.contains(cash));
+
+        Assert.assertTrue(isDiscountPrice);
     }
 }
 
