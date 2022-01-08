@@ -70,11 +70,34 @@ public class MyStoreShopping {
     }
 
 
-//    @And("wybieramy {string} i 5, dodajemy produkt do koszyka przechodzimy do proceed to checkout")
-//    public void wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(String rozmiar) {
-//    }
-//
-//
+    @And("wybieramy {string} i {string}, dodajemy produkt do koszyka przechodzimy do proceed to checkout")
+    public void wybieramyRozmiarIDodajemyProduktDoKoszykaPrzechodzimyDoProceedToCheckout(String size, String quantity) {
+
+        $(By.id("group_1")).sendKeys(size);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        $(By.id("quantity_wanted")).clear();
+        $(By.id("quantity_wanted")).sendKeys(quantity);
+
+        $(By.cssSelector(".btn.btn-primary.add-to-cart")).click();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        $(By.cssSelector("#blockcart-modal > div > div > div.modal-body > div > div.col-md-7 > div > div > a")).click();
+
+        $(By.cssSelector("#main > div > div.cart-grid-right.col-xs-12.col-lg-4 > div.card.cart-summary > div.checkout.cart-detailed-actions.card-block > div > a")).click();
+    }
+
+
 //    @And("potwierdzenie adresu, wybranie metody obioru")
 //    public void potwierdzenieAdresuWybranieMetodyObioru() {
 //    }
