@@ -98,11 +98,15 @@ public class MyStoreShopping {
     }
 
 
-//    @And("potwierdzenie adresu, wybranie metody obioru")
-//    public void potwierdzenieAdresuWybranieMetodyObioru() {
-//    }
-//
-//
+    @And("potwierdzenie adresu, wybranie metody obioru")
+    public void potwierdzenieAdresuWybranieMetodyObioru() {
+
+        $(By.name("confirm-addresses")).click();
+
+        $(By.name("confirmDeliveryOption")).click();
+    }
+
+
 //    @And("wybranie metody platności, klikniecie order with obligation to pay")
 //    public void wybranieMetodyPlatnościKlikniecieOrderWithObligationToPay() {
 //    }
